@@ -1,0 +1,390 @@
+@font-face {
+    font-family: Byekan;
+    src: url(Byekan/BYEKAN.woff2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    font-family: Byekan;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "line"
+    "services"
+    "about"
+    "contact"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    height: 100px;
+    background: 
+    linear-gradient(#10172f,#36217b);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 3fr 1fr;
+    position: relative;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    position: absolute;
+    top: 5px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: -13px;
+    right: 70px;
+}
+
+header .start {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        70deg,
+        rgba(94, 41, 139, 0.7) 45%,
+        #5d2185 75%,
+        #6e299c 100%
+    );
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+    border-radius: 30px;
+}
+
+header nav {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+        min-width: 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1.8%;
+    margin-top: 70px;
+    gap: 2.2%;
+}
+
+header nav ul li {
+    list-style: none;
+    flex: 1 1 70px;
+}
+
+header nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    height: 25px;
+    background-color: #10172f;
+    border-radius: 20px;
+}
+
+.active {
+    background-color: #7138f5;
+}
+
+.hero {
+    grid-area: hero;
+    color: #fff;
+    background-image: url(Images/photo_31255400356_x.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 0.7fr  1fr 1fr;
+    grid-template-columns:  1fr 0.8fr 2fr ;
+    padding: 0;
+}
+
+.hero h2 {
+    grid-column: span 3;
+    font-size: 2.2rem;
+    margin-right: 15px;
+}
+
+.hero h2 span {
+    color: #7138f5;
+}
+
+.hero p {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.hero a {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        70deg,
+        rgba(94, 41, 139, 0.7) 45%,
+        #5d2185 75%,
+        #6e299c 100%
+    );
+    height: 30%;
+    min-width: 100%;
+    width: 110%;
+    border-radius: 30px;
+    margin: 50% 2% 0 0;
+}
+
+.hero img {
+    width: 100%;
+    min-width: 0;
+    max-width: 95%;
+    height: auto;
+    object-fit: contain;
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    align-self: self-end;
+    margin-bottom: 30px;
+    margin-right: 1%;
+}
+
+img {
+    max-width: 100px;
+}
+
+.line {
+    grid-area: line;
+    width: 95%;
+    height: 2px;
+    margin: 15px 2.5%;
+    background-color: #36217b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line p {
+    width: 20%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    gap: 3%;
+    margin: 3vh;
+}
+
+.item {
+    background-color: #f5f3ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    border: 1px solid #e4e6d6;
+    border-radius: 30px;
+}
+
+.about {
+    grid-area: about;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        to left,
+        #171a32 20%,
+        rgba(23,26,50,0.95) 40%,
+        rgba(23,26,50,0) 100%
+    ),
+    url("Images/IMG_20261112_194237.webp");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    padding-right:5% ;
+}
+
+.about b {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.about p {
+    display: none;
+}
+
+.about a {
+    display: flex;
+    width: 35%;
+    height: 7vh;
+    max-height: 8vh;
+    background: linear-gradient(
+        70deg,
+        rgba(94, 41, 139, 0.7) 45%,
+        #5d2185 75%,
+        #6e299c 100%
+    );
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.contact {
+    grid-area: contact;
+    width: 100%;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "img text"
+    "img call"
+    ;
+    background-color: #dcc6fd;
+    justify-items: center;
+}
+
+.contact img {
+    grid-area: img;
+    width: 100%;
+    min-width: none;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.contact b {
+    grid-area: text;
+    text-align: center;
+    font-size: 1.15rem;
+    margin: 20px 0 0 4%;
+}
+
+.contact a {
+    grid-area: call;
+    display: flex;
+    width: 70%;
+    height: 7vh;
+    max-height: 8vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        70deg,
+        rgb(94, 41, 139) 45%,
+        #5d2185 75%,
+        #6e299c 100%
+    );
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.contact p {
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+    "nav nav icon"
+    "logo copy copy"
+    ;
+    width: 100%;
+    height: 300px;
+    background-color: #171a32;
+    color: #fff;
+}
+
+footer nav {
+    grid-area: nav;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 5px;
+}
+
+footer nav ul li a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer .media-icons {
+    grid-area: icon;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-icons a img {
+    width: 140%;
+    min-width: 0;
+    max-width: 200%;
+    height: auto;
+}
+
+footer .logo {
+    grid-area: logo;
+    width: 80px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 2vh;
+}
+
+footer p {
+    grid-area: copy;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 2vh;
+}
